@@ -1,6 +1,7 @@
 package FormNa::Web::Controller::Resume;
 use Moose;
 use namespace::autoclean;
+use OpenDocument::Template;
 
 BEGIN {extends 'Catalyst::Controller'; }
 
@@ -23,8 +24,26 @@ Catalyst Controller.
 
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
+    
+    my %formna_config;
+    
+    $formna_config{templates}{'content.xml'} = {
+        test       => "Lee Minsun",
+    };
 
-    $c->response->body('Matched FormNa::Web::Controller::Resume in Resume.');
+    my $tpl_dir = sprintf "%s/templates", $c->config->{odt}{root_resume};
+    my $src = sprintf "%s/template.odt", $c->config->{odt}{root_resume};
+    my $time = time;
+    my $dst = sprintf "%s/result/%s.odt", $c->config->{odt}{root_resume}, $time;
+    
+    my $odt = OpenDocument::Template->new(
+        config       => \%formna_config,
+        template_dir => $tpl_dir,
+    	  src          => $src,
+    	  dest         => $dst,
+    );
+    $odt->generate;
+    $c->log->debug("Generated $dst");
 }
 
 
