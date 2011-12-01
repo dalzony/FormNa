@@ -27,7 +27,7 @@ sub index :Path :Args(0) {
 
     my $name            = $c->req->param('name');
     my $name_en         = $c->req->param('name_en');
-    my $choise          = $c->req->param('name_choice');
+    my $choise          = $c->req->param('choice');
     my $security_num    = $c->req->param('name');
     my %formna_config;
     
