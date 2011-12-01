@@ -25,11 +25,17 @@ Catalyst Controller.
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
 
-    my $test = $c->req->param('name');    
+    my $name            = $c->req->param('name');
+    my $name_en         = $c->req->param('name_en');
+    my $choise          = $c->req->param('name_choice');
+    my $security_num    = $c->req->param('name');
     my %formna_config;
     
     $formna_config{templates}{'content.xml'} = {
-        test => $test,
+        name          => $name,
+        name_en       => $name_en,
+        choice        => $choise,
+        security_num  => $security_num,
     };
 
     my $tpl_dir = sprintf "%s/templates", $c->config->{odt}{root_resume};
@@ -45,6 +51,7 @@ sub index :Path :Args(0) {
     );
     $odt->generate;
     $c->log->debug("Generated $dst");
+
 }
 
 
