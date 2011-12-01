@@ -24,11 +24,12 @@ Catalyst Controller.
 
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
-    
+
+    my $test = $c->req->param('name');    
     my %formna_config;
     
     $formna_config{templates}{'content.xml'} = {
-        test       => "Lee Minsun",
+        test => $test,
     };
 
     my $tpl_dir = sprintf "%s/templates", $c->config->{odt}{root_resume};
