@@ -30,7 +30,6 @@
 
 <fieldset>
 <h1 align="center">이  력  서</h1>
-<form action="[% c.uri_for('/resume') %]" method="post" enctype="multipart/form-data">
 <h3>1. 기초자료</h3>
 <TABLE ALIGN="center" WIDTH=90% CELLPADDING=4 CELLSPACING=0>
 	<COL WIDTH=141>
@@ -628,13 +627,11 @@
 
 </fieldset>
 
-<fieldset>
-<h1 align="center">자기소개서</h1>
 
+<form action="[% c.uri_for('/resume') %]" method="post" enctype="multipart/form-data">
+<input type="text" name="name_en" value="val"/>
+<input type="submit" value="뿅" />
 
-</fieldset>
-
-<INPUT type="submit" value="odt생성">
 </form>
 
 

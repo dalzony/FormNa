@@ -2,6 +2,7 @@ package FormNa::Web::Controller::Resume;
 use Moose;
 use namespace::autoclean;
 use OpenDocument::Template;
+use utf8;
 
 BEGIN {extends 'Catalyst::Controller'; }
 
@@ -31,6 +32,7 @@ sub index :Path :Args(0) {
     my $security_num    = $c->req->param('security_num');
     
     $c->log->debug("나오라고 : $name");
+
     my %formna_config;
     
     $formna_config{templates}{'content.xml'} = {
