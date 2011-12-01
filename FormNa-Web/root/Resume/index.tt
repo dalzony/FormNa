@@ -1,26 +1,640 @@
 [% meta.title = '이력서 생성' -%]
 
-<form action="[% c.uri_for('/resume') %]" method="post" enctype="multipart/form-data">
-<fieldset>
-  <div class="required">
-    <label>이름</label>
-    <input name="name" type="text" />
-  </div>
-</fieldset>
-</form>
+<TABLE ALIGN="center" WIDTH=95% CELLPADDING=4 CELLSPACING=0 FRAME=HSIDES RULES=NONE>
+	<COL WIDTH=256*>
+	<TR>
+		<TD WIDTH=100% VALIGN=TOP STYLE="border-top: 2.50pt solid #944794; border-bottom: none; border-left: none; border-right: none; padding-top: 0.1cm; padding-bottom: 0cm; padding-left: 0cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=7>입사 지원서</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+
+		<TD WIDTH=100% VALIGN=TOP STYLE="border: none; padding: 0cm">
+			<P ALIGN=LEFT>                     <FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN LANG="en-US"><I>Resume</I></SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=100% VALIGN=BOTTOM STYLE="border: none; padding: 0cm">
+			<P><BR>
+			</P>
+
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=100% VALIGN=BOTTOM STYLE="border-top: none; border-bottom: 2.50pt solid #944794; border-left: none; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0cm; padding-right: 0cm">
+			<P ALIGN=RIGHT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">2011.12.01</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+
 
 <fieldset>
 <h1 align="center">이  력  서</h1>
+<form action="[% c.uri_for('/resume') %]" method="post" enctype="multipart/form-data">
 <h3>1. 기초자료</h3>
+<TABLE ALIGN="center" WIDTH=90% CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=141>
+	<COL WIDTH=107>
+	<COL WIDTH=163>
+
+	<COL WIDTH=95>
+	<COL WIDTH=203>
+	<TR VALIGN=TOP>
+		<TD ROWSPAN=6 WIDTH=141 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			picture%]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=107 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">성명</FONT></P>
+
+		</TD>
+		<TD WIDTH=163 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">
+          <input name="name" type="text" />
+      </SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=95 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">성명</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">(</SPAN></FONT></FONT><FONT FACE="나눔고딕">영문</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">)</SPAN></FONT></FONT></P>
+
+		</TD>
+		<TD WIDTH=203 STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">
+        <input name="name_en" type="text" />
+      </SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=107 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">희망지원</FONT></P>
+
+		</TD>
+		<TD COLSPAN=3 WIDTH=476 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">
+        <input name="choise" type="text" />
+      </SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=107 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">주민등록번호</FONT></P>
+
+		</TD>
+		<TD COLSPAN=3 WIDTH=476 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">
+        <input name="security_num" type="text" /></SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=107 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">E-mail</SPAN></FONT></FONT></P>
+
+		</TD>
+		<TD COLSPAN=3 WIDTH=476 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			email | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=107 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">전화번호</FONT></P>
+
+		</TD>
+		<TD WIDTH=163 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			phone | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=95 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">휴대폰</FONT></P>
+		</TD>
+		<TD WIDTH=203 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			cell_p | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=107 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">주소</FONT></P>
+		</TD>
+		<TD COLSPAN=3 WIDTH=476 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			address | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
 <h3>2. 병역 및 보훈 사항</h3>
+<TABLE WIDTH=100% CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=64*>
+	<COL WIDTH=64*>
+
+	<COL WIDTH=64*>
+	<COL WIDTH=64*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">제대구분</FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			army | xml %]</SPAN></FONT></FONT></P>
+
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">보훈대상</FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			veteran | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">면제사유</FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			exemption | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+
+			<P><FONT FACE="나눔고딕">복무기간</FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			term_a | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+
+			<P><FONT FACE="나눔고딕">군별</FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">병과</FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">계급</FONT></P>
+
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕">기타사항</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			section | xml %]</SPAN></FONT></FONT></P>
+
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			service | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			rank | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			etc_a | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+
+
 <h3>3. 학력사항</h3>
+<TABLE WIDTH=100% CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=64*>
+	<COL WIDTH=64*>
+
+	<COL WIDTH=64*>
+	<COL WIDTH=64*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">기 간</FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">학교명</FONT></P>
+
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">학과</FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P><FONT FACE="나눔고딕">성적</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">(</SPAN></FONT></FONT><FONT FACE="나눔고딕">득점</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">/</SPAN></FONT></FONT><FONT FACE="나눔고딕">만점</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">)</SPAN></FONT></FONT></P>
+
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			term_s_1 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			name_s_1 | xml %]</SPAN></FONT></FONT></P>
+
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			major_1 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			score_s_1 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			term_s_2 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			name_s_2 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			major_2 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			score_s_1 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+
+
 <h3>4. 경력사항 (전직 근무기간, 아르바이트, 연수, 학원 등...)</h3>
+<TABLE WIDTH=100% CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=64*>
+	<COL WIDTH=64*>
+
+	<COL WIDTH=64*>
+	<COL WIDTH=64*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">기간</FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">회사명</FONT></P>
+
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">부서</FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P><FONT FACE="나눔고딕">직위</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">/</SPAN></FONT></FONT><FONT FACE="나눔고딕">직급</FONT></P>
+		</TD>
+
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			term_c_1 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			name_c_1 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			part_c_1 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			position_1 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			term_c_2 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			name_c_2 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			part_c_2 | xml %]</SPAN></FONT></FONT></P>
+
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			position_2 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			term_c_3 | xml %]</SPAN></FONT></FONT></P>
+
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			name_c_3 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			part_c_3 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			position_3 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			term_c_4 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			name_c_4 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			part_c_4 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			position_4 | xml %]</SPAN></FONT></FONT></P>
+
+		</TD>
+	</TR>
+</TABLE>
+
 <h3>5. 개인능력</h3>
+
+<TABLE WIDTH=100% CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=47*>
+	<COL WIDTH=41*>
+	<COL WIDTH=168*>
+
+	<TR>
+		<TD ROWSPAN=3 WIDTH=18% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="나눔고딕">어       학</FONT></P>
+		</TD>
+		<TD WIDTH=16% VALIGN=TOP STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="나눔고딕">영   어</FONT></P>
+		</TD>
+		<TD WIDTH=66% VALIGN=TOP STYLE="border: 1px solid #000000; padding: 0.1cm">
+
+			<P> <FONT FACE="나눔고딕">탁월함</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			en_ex | xml %]) | </SPAN></FONT></FONT><FONT FACE="나눔고딕">잘함</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			en_good | xml %]) | </SPAN></FONT></FONT><FONT FACE="나눔고딕">보통
+			</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			en_well | xml %]) | </SPAN></FONT></FONT><FONT FACE="나눔고딕">미흡</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			en_poor| xml %])    </SPAN></FONT></FONT><FONT FACE="나눔고딕">토익
+			</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">:
+			[% toeic | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+
+	<TR>
+		<TD WIDTH=16% VALIGN=TOP STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="나눔고딕">일본어</FONT></P>
+		</TD>
+		<TD WIDTH=66% VALIGN=TOP STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P> <FONT FACE="나눔고딕">탁월함</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			j_ex | xml %]) | </SPAN></FONT></FONT><FONT FACE="나눔고딕">잘함</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			j_good | xml %]) | </SPAN></FONT></FONT><FONT FACE="나눔고딕">보통
+			</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			j_well | xml %]) | </SPAN></FONT></FONT><FONT FACE="나눔고딕">미흡</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			j_poor | xml %])    JLPT :[% jlpt | xml %]</SPAN></FONT></FONT></P>
+
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16% VALIGN=TOP STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="나눔고딕">기   타</FONT></P>
+		</TD>
+		<TD WIDTH=66% VALIGN=TOP STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			etc_lang | xml %]</SPAN></FONT></FONT></P>
+
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=3 WIDTH=18% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="나눔고딕">컴  퓨  터</FONT></P>
+		</TD>
+		<TD WIDTH=16% VALIGN=TOP STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="나눔고딕">기본 </FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">OA</SPAN></FONT></FONT></P>
+
+		</TD>
+		<TD WIDTH=66% VALIGN=TOP STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P> <FONT FACE="나눔고딕">탁월함</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			com_ex | xml %]) | </SPAN></FONT></FONT><FONT FACE="나눔고딕">잘함</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			com_good | xml %]) | </SPAN></FONT></FONT><FONT FACE="나눔고딕">보통
+			</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			com_well | xml %]) | </SPAN></FONT></FONT><FONT FACE="나눔고딕">미흡</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			com_poor | xml %])</SPAN></FONT></FONT></P>
+		</TD>
+
+	</TR>
+	<TR>
+		<TD WIDTH=16% VALIGN=TOP STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="나눔고딕">프로그래밍</FONT></P>
+		</TD>
+		<TD WIDTH=66% VALIGN=TOP STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P> <FONT FACE="나눔고딕">탁월함</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			pro_ex | xml %]) | </SPAN></FONT></FONT><FONT FACE="나눔고딕">잘함</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			pro_good | xml %]) | </SPAN></FONT></FONT><FONT FACE="나눔고딕">보통
+			</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			pro_well | xml %]) | </SPAN></FONT></FONT><FONT FACE="나눔고딕">미흡</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">([%
+			pro_poor | xml %])</SPAN></FONT></FONT></P>
+
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=16% VALIGN=TOP STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="나눔고딕">기타</FONT></P>
+		</TD>
+		<TD WIDTH=66% VALIGN=TOP STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			etc_com | xml %]</SPAN></FONT></FONT></P>
+
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=18% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="나눔고딕">기       타</FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=82% VALIGN=TOP STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=JUSTIFY><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			etc_ability | xml %]</SPAN></FONT></FONT></P>
+
+		</TD>
+	</TR>
+</TABLE>
+
 <h3>6. 자격증</h3>
+<TABLE WIDTH=100% CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=85*>
+	<COL WIDTH=85*>
+	<COL WIDTH=85*>
+
+	<TR VALIGN=TOP>
+		<TD WIDTH=33% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">취득년월일</FONT></P>
+		</TD>
+		<TD WIDTH=33% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">자격증</FONT></P>
+		</TD>
+		<TD WIDTH=33% STYLE="border: 1px solid #000000; padding: 0.1cm">
+
+			<P><FONT FACE="나눔고딕">발급기관</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=33% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			date_1 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=33% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			licence_1 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=33% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			organ_1 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=33% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			date_2 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=33% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			licence_2 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=33% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			organ_2 | xml %]</SPAN></FONT></FONT></P>
+
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=33% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			date_3 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=33% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			licence_3 | xml %]</SPAN></FONT></FONT></P>
+
+		</TD>
+		<TD WIDTH=33% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			organ_3 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=33% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			date_4 | xml %]</SPAN></FONT></FONT></P>
+
+		</TD>
+		<TD WIDTH=33% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			licence_4 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=33% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			organ_4 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+
+</TABLE>
+
 <h3>7. 봉사활동</h3>
+<TABLE WIDTH=100% CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=53*>
+	<COL WIDTH=49*>
+	<COL WIDTH=154*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=21% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+
+			<P><FONT FACE="나눔고딕">기간</FONT></P>
+		</TD>
+		<TD WIDTH=19% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕">기관</FONT><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">/</SPAN></FONT></FONT><FONT FACE="나눔고딕">단체명</FONT></P>
+		</TD>
+		<TD WIDTH=60% STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P><FONT FACE="나눔고딕">활동내용</FONT></P>
+
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=21% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			term_v_1 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=19% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			organ_v_1 | xml %]</SPAN></FONT></FONT></P>
+
+		</TD>
+		<TD WIDTH=60% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			activity_1 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=21% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			term_v_2 | xml %]</SPAN></FONT></FONT></P>
+
+		</TD>
+		<TD WIDTH=19% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			organ_v_2 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=60% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			activity_2 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+
+	<TR VALIGN=TOP>
+		<TD WIDTH=21% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			term_v_3 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=19% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			organ_v_3 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=60% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+
+			<P><FONT FACE="나눔고딕"><FONT SIZE=3><SPAN LANG="en-US">[%
+			activity_3 | xml %]</SPAN></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+
 </fieldset>
 
 <fieldset>
 <h1 align="center">자기소개서</h1>
+
+
 </fieldset>
+
+<INPUT type="submit" value="odt생성">
+</form>
+
 
