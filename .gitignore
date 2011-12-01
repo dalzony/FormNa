@@ -5,7 +5,7 @@ run.sh
 # ODT files
 ###########
 FormNa-Web/resume-odt/result/*.odt
-
+FormNa-Web/resume-odt/result/*.odt#
 
 # Editor generated files #
 ##########################
@@ -15,3 +15,4 @@ FormNa-Web/resume-odt/result/*.odt
 *.po~
 *.new
 tmp/
+
