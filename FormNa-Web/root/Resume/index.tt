@@ -8,3 +8,19 @@
   </div>
 </fieldset>
 </form>
+
+<fieldset>
+<h1 align="center">이  력  서</h1>
+<h3>1. 기초자료</h3>
+<h3>2. 병역 및 보훈 사항</h3>
+<h3>3. 학력사항</h3>
+<h3>4. 경력사항 (전직 근무기간, 아르바이트, 연수, 학원 등...)</h3>
+<h3>5. 개인능력</h3>
+<h3>6. 자격증</h3>
+<h3>7. 봉사활동</h3>
+</fieldset>
+
+<fieldset>
+<h1 align="center">자기소개서</h1>
+</fieldset>
+
