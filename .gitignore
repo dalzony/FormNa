@@ -1,0 +1,17 @@
+# Run
+#####
+run.sh
+
+# ODT files
+###########
+FormNa-Web/resume-odt/result/*.odt
+
+
+# Editor generated files #
+##########################
+*.swp
+*.bak
+*.ttc
+*.po~
+*.new
+tmp/
