@@ -43,7 +43,7 @@ Take information from form and add to odt file
 sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
     my ($self, $c) = @_;
     
-    my $name            = $c->req->param('name')
+    my $name            = $c->req->param('name');
     my $num             = $c->req->param('num');
     my $subject         = $c->req->param('subject');
     my $award_name      = $c->req->param('award_name');
@@ -59,16 +59,16 @@ sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
     
     $formna_config{templates}{'content.xml'} = {
         name            => $name,
-        num             => $num            
-        subject         => $subject        
-        award_name      => $award_name     
-        receiver        => $receiver       
-        comment         => $comment        
-        year            => $year           
-        month           => $month          
-        day             => $day            
-        organ           => $organ          
-        organ_president => $organ_president
+        num             => $num,
+        subject         => $subject,
+        award_name      => $award_name,
+        receiver        => $receiver,
+        comment         => $comment,
+        year            => $year,
+        month           => $month,
+        day             => $day,
+        organ           => $organ,
+        organ_president => $organ_president,
     };
 
     my $tpl_dir = sprintf "%s/templates", $c->config->{odt}{root_award};
