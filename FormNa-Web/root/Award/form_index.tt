@@ -1,4 +1,4 @@
-[% meta.title = '전단지 생성' -%]
+[% meta.title = '상장 생성' -%]
 
 <form  action="[% c.uri_for('form_create_do') %]"  method="post" enctype="multipart/form-data">
   <input type="text" name="name"/>
