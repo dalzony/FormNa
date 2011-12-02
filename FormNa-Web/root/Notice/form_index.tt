@@ -1,2 +1,10 @@
 [% meta.title = '전단지 생성' -%]
-
+<form  action="[% c.uri_for('form_create_do') %]"  method="post" enctype="multipart/form-data">
+  <input type="text" name="subject" />
+  <input type="text" name="short_comment" />
+  <input type="text" name="detail_comment" />
+  <input type="text" name="picture" />
+  <input type="text" name="phone" />
+  <input type="text" name="name" />
+  <input type="submit" value="뿅" />
+</form>

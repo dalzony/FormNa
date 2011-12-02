@@ -5,9 +5,8 @@ run.sh
 # ODT files
 ###########
 FormNa-Web/resume-odt/result/*.odt
-FormNa-Web/resume-odt/result/.*.*.odt#
 FormNa-Web/award-odt/result/*.odt
-FormNa-Web/award-odt/result/.*.*.odt#
+FormNa-Web/notice-odt/result/*.odt
 
 # Editor generated files #
 ##########################
@@ -16,5 +15,6 @@ FormNa-Web/award-odt/result/.*.*.odt#
 *.ttc
 *.po~
 *.new
+*.odt#
 tmp/
 
