@@ -51,10 +51,10 @@ sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
         name          => $name,
     };
 
-    my $tpl_dir = sprintf "%s/templates", $c->config->{odt}{root_};
-    my $src = sprintf "%s/template.odt", $c->config->{odt}{root_};
+    my $tpl_dir = sprintf "%s/templates", $c->config->{odt}{root_notice};
+    my $src = sprintf "%s/template.odt", $c->config->{odt}{root_notice};
     my $time = time;
-    my $dst = sprintf "%s/result/%s.odt", $c->config->{odt}{root_}, $time;
+    my $dst = sprintf "%s/result/%s.odt", $c->config->{odt}{root_notice}, $time;
     
     my $odt = OpenDocument::Template->new(
         config       => \%formna_config,
