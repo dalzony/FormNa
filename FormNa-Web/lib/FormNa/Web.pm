@@ -1,7 +1,7 @@
 package FormNa::Web;
 use Moose;
 use namespace::autoclean;
-
+use Encode qw/decode_utf8/;
 use Catalyst::Runtime 5.80;
 
 # Set flags and add plugins for the application.
@@ -20,6 +20,7 @@ use Catalyst qw/
     -Debug
     ConfigLoader
     Static::Simple
+    Unicode::Encoding
 /;
 
 extends 'Catalyst';
