@@ -6,6 +6,7 @@ run.sh
 ###########
 FormNa-Web/resume-odt/result/*.odt
 FormNa-Web/award-odt/result/*.odt
+FormNa-Web/notice-odt/result/*.odt
 
 # Editor generated files #
 ##########################
