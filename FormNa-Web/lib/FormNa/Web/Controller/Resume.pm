@@ -23,16 +23,34 @@ Catalyst Controller.
 
 =cut
 
-sub index :Path :Args(0) {
+sub index :Chained('/') :PathPart('resume') :CaptureArgs(0){
     my ( $self, $c ) = @_;
+}
 
+=head2 form_index
+
+Display form to web
+
+=cut
+
+sub form_index :Chained('index') :PathPart('') :Args(0) {
+    my ($self, $c) = @_;
+}
+
+=head2 form_create_do
+
+Take information from form and add to odt file
+
+=cut
+
+sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
+    my ($self, $c) = @_;
+    
     my $name            = $c->req->param('name');
     my $name_en         = $c->req->param('name_en');
     my $choise          = $c->req->param('choice');
     my $security_num    = $c->req->param('security_num');
     
-    $c->log->debug("나오라고 : $name");
-
     my %formna_config;
     
     $formna_config{templates}{'content.xml'} = {
@@ -57,7 +75,6 @@ sub index :Path :Args(0) {
     $c->log->debug("Generated $dst");
 
 }
-
 
 =head1 AUTHOR
 
