@@ -74,6 +74,13 @@ sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
     $odt->generate;
     $c->log->debug("Generated $dst");
 
+    #my $st = stat($dst) or die "No $dst: $!";
+    $c->res->headers->content_type('application/msword');
+    #$c->res->headers->content_length($st->size);
+    $c->res->headers->header("Content-Disposition" => 'attachment;filename="' . "$time.doc" . '";');
+    my $fh = IO::File->new( $dst, 'r' );
+    $c->res->body($fh);
+    undef $fh;
 }
 
 =head1 AUTHOR
