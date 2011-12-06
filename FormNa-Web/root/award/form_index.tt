@@ -1,18 +1,59 @@
 [% meta.title = '상장 생성' -%]
 
 <form  action="[% c.uri_for('form_create_do') %]"  method="post" enctype="multipart/form-data">
-  <input type="text" name="name"/>
-  <input type="text" name="num"/>
-  <input type="text" name="subject"/>
-  <input type="text" name="award_name"/>
-  <input type="text" name="receiver"/>
-  <input type="text" name="comment"/>
-  <input type="text" name="year"/>
-  <input type="text" name="month"/>
-  <input type="text" name="day"/>
-  <input type="text" name="organ"/>
-  <input type="text" name="organ_president"/>
-  <input type="submit" value="뿅" />
+  <div>
+    <label>수여자 이름// 여기 박스나오게</label>
+    <input type="text" name="name"/>
+  </div>
+  <div>
+    <label>상장 번호</label>
+    <input type="text" name="num"/>
+  </div>
+ <!-- 여긴 딱히 줄 필요 없을 것 같다.
+   <div>
+    <label>상장( 또는 공로상... 그런거)</label>  
+    <input type="text" name="subject"/>
+  </div>
+--->
+ <!-- 여긴 FTA관련 문구로
+  <div>
+    <label>어떤상(예 : 솔로대상)</label>
+    <input type="text" name="award_name"/>
+  </div>
+-->
+  <div>
+    <label>이게 수여자인가 ..</label>
+    <input type="text" name="receiver"/>
+  </div>
+  <div>
+<!--
+    <label>상장 내용</label>
+    <input type="text" name="comment"/>
+  </div>
+  <div>
+    <label>수여 날짜</label>
+    <input type="text" name="year"/>
+  </div>
+  <div>
+    <label></label>
+    <input type="text" name="month"/>
+  </div>
+  <div>
+    <label></label>
+    <input type="text" name="day"/>
+  </div>
+-->
+  <div>
+    <label>주는 단체</label>
+    <input type="text" name="organ"/>
+  </div>
+  <div>
+    <label>주는 사람 대표</label>
+    <input type="text" name="organ_president"/>
+  </div>
+  <div>
+    <input type="submit" value="뿅~" />
+  </div>
 </form>
 
 
