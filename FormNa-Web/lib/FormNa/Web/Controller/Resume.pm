@@ -3,6 +3,7 @@ use Moose;
 use namespace::autoclean;
 use OpenDocument::Template;
 use utf8;
+use DateTime;
 
 BEGIN {extends 'Catalyst::Controller'; }
 
@@ -131,9 +132,10 @@ sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
     my $activity_1      = $c->req->param('activity_1');
     my $activity_2      = $c->req->param('activity_2');
     my $activity_3      = $c->req->param('activity_3');
-    my $year            = $c->req->param('year');
-    my $month           = $c->req->param('month');
-    my $day             = $c->req->param('day');
+    my $year            = DateTime->now->year;
+    $c->log->debug($year);
+    my $month           = DateTime->now->month; 
+    my $day             = DateTime->now->day;
     
     my %formna_config;
     

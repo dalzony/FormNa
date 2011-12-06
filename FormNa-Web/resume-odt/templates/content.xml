@@ -417,7 +417,7 @@
         </table:table-row>
         <table:table-row>
           <table:table-cell table:style-name="표1.A4" office:value-type="string">
-            <text:p text:style-name="P3">2011.12.01</text:p>
+            <text:p text:style-name="P3">[% year %]. [% month %]. [% day %]</text:p>
           </table:table-cell>
         </table:table-row>
       </table:table>
