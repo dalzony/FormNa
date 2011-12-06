@@ -43,17 +43,17 @@ Take information from form and add to odt file
 sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
     my ($self, $c) = @_;
 
-    my $subject         = $c->req->param('subject');
-    my $name            = $c->req->param('name');
+#    my $subject         = $c->req->param('subject');
+#    my $name            = $c->req->param('name');
     my %formna_config;
 
     $formna_config{templates}{'content.xml'} = {
-        subject        => $subject,
-        short_comment  => $short_comment,
-        detail_comment => $detail_comment,
-        picture        => $picture,
-        phone          => $phone,
-        name           => $name,
+ #       subject        => $subject,
+ #       short_comment  => $short_comment,
+ #       detail_comment => $detail_comment,
+ #       picture        => $picture,
+ #       phone          => $phone,
+ #       name           => $name,
     };
 
     my $tpl_dir = sprintf "%s/templates", $c->config->{odt}{root_cv};
