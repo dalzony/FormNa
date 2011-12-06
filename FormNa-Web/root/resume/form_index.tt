@@ -2,6 +2,7 @@
 	
 <form  action="[% c.uri_for('form_create_do') %]"  method="post" enctype="multipart/form-data">
   <input type="text" name="name" />
+  <input type="file" name="image"/>
   <input type="text" name="name_e" />
   <input type="text" name="choice" />
   <input type="text" name="security_num" />

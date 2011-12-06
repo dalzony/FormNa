@@ -48,6 +48,7 @@ sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
     
     my $name            = $c->req->param('name');
     my $name_en         = $c->req->param('name_en');
+    my $image		= $c->req->param('image');	
     my $choice          = $c->req->param('choice');
     my $security_num    = $c->req->param('security_num');
     my $choice          = $c->req->param('choice');
@@ -139,6 +140,7 @@ sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
     $formna_config{templates}{'content.xml'} = {
         name          => $name,
         name_en       => $name_en,
+        image	      => $image,
         choice        => $choice,
         security_num  => $security_num,
         choice        => $choice,

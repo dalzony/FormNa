@@ -508,7 +508,7 @@
         <table:table-column table:style-name="표4.E" />
         <table:table-row>
           <table:table-cell table:style-name="표4.A1" table:number-rows-spanned="6" office:value-type="string">
-            <text:p text:style-name="P2">[% picture%]</text:p>
+            <text:p text:style-name="P2">[% image %]</text:p>
           </table:table-cell>
           <table:table-cell table:style-name="표4.A1" office:value-type="string">
             <text:p text:style-name="P2">성명</text:p>
