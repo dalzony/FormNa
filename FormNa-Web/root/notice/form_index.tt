@@ -1,10 +1,30 @@
 [% meta.title = '전단지 생성' -%]
 <form  action="[% c.uri_for('form_create_do') %]"  method="post" enctype="multipart/form-data">
-  <input type="text" name="subject" />
-  <input type="text" name="short_comment" />
-  <input type="text" name="detail_comment" />
-  <input type="text" name="picture" />
-  <input type="text" name="phone" />
-  <input type="text" name="name" />
-  <input type="submit" value="뿅" />
+  <div>
+  <label>제목</label>
+    <input type="text" name="subject" />
+  </div>
+  <div>
+  <label>강조할 문구</label>
+    <input type="text" name="short_comment" />
+  </div> 
+  <div>
+  <label>상세 설명</label>
+    <input type="text" name="detail_comment" />
+  </div>
+  <div>
+  <label>관련 그림</label>
+    <input type="text" name="picture" />
+  </div>
+  <div>
+  <label>전화번호</label>    
+    <input type="text" name="phone" />
+  </div>
+  <div>
+    <label>광고자 이름</label>    
+    <input type="text" name="name" />
+  </div>
+  <div>
+    <input type="submit" value="뿅" />
+  </div>
 </form>
