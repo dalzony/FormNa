@@ -1,6 +1,8 @@
 package FormNa::Web::Controller::Award;
 use Moose;
 use namespace::autoclean;
+use OpenDocument::Template;
+use utf8;
 
 BEGIN {extends 'Catalyst::Controller'; }
 
@@ -84,7 +86,11 @@ sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
     );
     $odt->generate;
     $c->log->debug("Generated $dst");
-
+    $c->res->headers->content_type('application/msword');
+    $c->res->headers->header("Content-Disposition" => 'attachment;filename="' . "$time.doc" . '";');
+    my $fh = IO::File->new( $dst, 'r' );
+    $c->res->body($fh);
+    undef $fh;
 }
 
 =head1 AUTHOR
