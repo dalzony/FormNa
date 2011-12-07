@@ -3,6 +3,7 @@ use Moose;
 use namespace::autoclean;
 use OpenDocument::Template;
 use utf8;
+use DateTime;
 
 BEGIN {extends 'Catalyst::Controller'; }
 
@@ -51,9 +52,9 @@ sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
     my $award_name      = $c->req->param('award_name');
     my $receiver        = $c->req->param('receiver');
     my $comment         = $c->req->param('comment');
-    my $year            = $c->req->param('year');
-    my $month           = $c->req->param('month');
-    my $day             = $c->req->param('day');
+    my $year            = DateTime->now->year;
+    my $month           = DateTime->now->month;
+    my $day             = DateTime->now->day;
     my $organ           = $c->req->param('organ');
     my $organ_president = $c->req->param('organ_president');
     
