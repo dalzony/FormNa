@@ -34,6 +34,7 @@ Display form to web
 
 sub form_index :Chained('index') :PathPart('') :Args(0) {
     my ($self, $c) = @_;
+    $c->stash(css => 'form');
 }
 
 =head2 form_create_do

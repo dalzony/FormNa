@@ -1,59 +1,60 @@
 [% meta.title = '상장 생성' -%]
 
 <form  action="[% c.uri_for('form_create_do') %]"  method="post" enctype="multipart/form-data">
-  <div>
-    <label>수여자 이름// 여기 박스나오게</label>
-    <input type="text" name="name"/>
-  </div>
-  <div>
-    <label>상장 번호</label>
-    <input type="text" name="num"/>
-  </div>
+<table id="form">
+  <tr>
+    <td class="label"><label>수여자 이름// 여기 박스나오게</label></td>
+    <td class="input"><input type="text" name="name"/></td>
+  </tr>
+  <tr>
+    <td class="label"><label>상장 번호</label></td>
+    <td class="input"><input type="text" name="num"/></td>
+  </tr>
  <!-- 여긴 딱히 줄 필요 없을 것 같다.
-   <div>
-    <label>상장( 또는 공로상... 그런거)</label>  
-    <input type="text" name="subject"/>
-  </div>
+   <tr>
+     <td class="label"><label>상장( 또는 공로상... 그런거)</label>  </td>
+     <td class="input"><input type="text" name="subject"/></td>
+  </tr>
 --->
  <!-- 여긴 FTA관련 문구로
-  <div>
-    <label>어떤상(예 : 솔로대상)</label>
-    <input type="text" name="award_name"/>
-  </div>
+  <tr>
+    <td class="label"><label>어떤상(예 : 솔로대상)</label></td>
+    <td class="input"><input type="text" name="award_name"/></td>
+  </tr>
 -->
-  <div>
-    <label>이게 수여자인가 ..</label>
-    <input type="text" name="receiver"/>
-  </div>
-  <div>
+  <tr>
+    <td class="label"><label>이게 수여자인가 ..</label></td>
+    <td class="input"><input type="text" name="receiver"/></td>
+  </tr>
+  <tr>
 <!--
-    <label>상장 내용</label>
-    <input type="text" name="comment"/>
-  </div>
-  <div>
-    <label>수여 날짜</label>
-    <input type="text" name="year"/>
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="month"/>
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="day"/>
-  </div>
+  <tr>
+    <td class="label"><label>상장 내용</label></td>
+    <td class="input"><input type="text" name="comment"/></td>
+  </tr>
+  <tr>
+    <td class="label"><label>수여 날짜</label></td>
+    <td class="input"><input type="text" name="year"/></td>
+  </tr>
+  <tr>
+    <td class="label"><label></label></td>
+    <td class="input"><input type="text" name="month"/></td>
+  </tr>
+  <tr>
+    <td class="label"><label></label></td>
+    <td class="input"><input type="text" name="day"/></td>
+  </tr>
 -->
-  <div>
-    <label>주는 단체</label>
-    <input type="text" name="organ"/>
-  </div>
-  <div>
-    <label>주는 사람 대표</label>
-    <input type="text" name="organ_president"/>
-  </div>
-  <div>
-    <input type="submit" value="뿅~" />
-  </div>
+  <tr>
+    <td class="label"><label>주는 단체</label></td>
+    <td class="input"><input type="text" name="organ"/></td>
+  </tr>
+  <tr>
+    <td class="label"><label>주는 사람 대표</label></td>
+    <td class="input"><input type="text" name="organ_president"/></td>
+  </tr>
+  <tr>
+    <td></td><td class="button"><input type="submit" value="뿅~" /></td>
+  </tr>
+</table>
 </form>
-
-

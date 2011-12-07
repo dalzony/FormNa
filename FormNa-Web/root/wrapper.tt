@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>FormNa</title>
+  <link href="/static/css/global.css" rel="stylesheet" type="text/css" />
+  [% IF css == 'form' %]
+  <link href="/static/css/form.css" rel="stylesheet" type="text/css" />
+  [% ELSE %]
+  <link href="/static/css/index.css" rel="stylesheet" type="text/css" />
+  [% END %]
+</head>
+<body>
+<div id="wrap">
+  <div id="head">
+    <h1><a href="/"><img id="logo" src="/static/img/formna.png" alt="FormNa"/></a></h1>
+  </div>
+  <div id="cont">
+    [% content %]
+  </div>
+  <div id="foot">
+    <p>article about me at <a href="http://advent.perl.kr/2011/2011-12-08">advent.perl.kr/2011-12-08</a></p>
+    <p>fork me at <a href="http://github.com/mintegrals/FormNa">github.com/mintegrals/FormNa</a></p>
+  </div>
+</div>
+</body>
+</html>

@@ -9,7 +9,7 @@ __PACKAGE__->config(
     TEMPLATE_EXTENSION => '.tt',
     render_die => 1,
     ENCODING => 'utf8',
-
+    WRAPPER => 'wrapper.tt',
 );
 
 =head1 NAME

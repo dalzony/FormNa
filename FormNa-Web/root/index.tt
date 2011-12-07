@@ -1,0 +1,5 @@
+<ul id="index-menu">
+  <li><a href="/resume"><img src="/static/img/menu0.png" /><span class="desc">이력서 뿅뿅</span></a></li>
+  <li><a href="/notice"><img src="/static/img/menu1.png" /><span class="desc">문어발 슉슉</span></a></li>
+  <li><a href="/award"><img src="/static/img/menu2.png" /><span class="desc">상장 짜잔</span></a></li>
+</ul>
