@@ -9,6 +9,7 @@
     </tr>
     <tr>
       <td class="label"><label>증명사진</label></td>
+      <input type="hidden" name="form_submit" value="yes">
       <td class="input"><input type="file" name="image"/></td>
     </tr>
     <tr>

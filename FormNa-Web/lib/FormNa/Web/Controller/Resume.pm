@@ -50,7 +50,7 @@ sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
     
     my $name            = $c->req->param('name');
     my $name_en         = $c->req->param('name_en');
-    my $image		= $c->req->param('image');	
+#    my $image		= $c->req->param('image');	
     my $choice          = $c->req->param('choice');
     my $security_num    = $c->req->param('security_num');
     my $choice          = $c->req->param('choice');
@@ -141,13 +141,27 @@ sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
     my $year            = $dt->year;
     my $month           = $dt->month; 
     my $day             = $dt->day;
+
+    my $time = time;
+    if ( $c->request->params->{'form_submit'} eq 'yes' ) {
+
+            if ( my $upload = $c->request->upload('image') ) {
+
+                #my $filename = $upload->filename;
+                my $filename = sprintf "%s-%s", $time, $upload->filename;
+                my $target   =   sprintf "%s/result/%s",$c->config->{odt}{root_resume},$filename;
+
+                unless ( $upload->link_to($target) || $upload->copy_to($target) ) {
+                    die( "Failed to copy '$filename' to '$target': $!" );
+                }
+            }
+        }
     
     my %formna_config;
     
     $formna_config{templates}{'content.xml'} = {
         name          => $name,
         name_en       => $name_en,
-        image	      => $image,
         choice        => $choice,
         security_num  => $security_num,
         choice        => $choice,
@@ -237,7 +251,6 @@ sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
 
     my $tpl_dir = sprintf "%s/templates", $c->config->{odt}{root_resume};
     my $src = sprintf "%s/template.odt", $c->config->{odt}{root_resume};
-    my $time = time;
     my $dst = sprintf "%s/result/%s.odt", $c->config->{odt}{root_resume}, $time;
     
     my $odt = OpenDocument::Template->new(
