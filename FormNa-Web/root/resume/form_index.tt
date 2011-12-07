@@ -181,83 +181,44 @@
     <input type="radio" name="english" value="en_poor">미흡
   </div>
   <div>
-    <label></label>
-    <input type="text" name="en_good" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="en_well" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="en_poor" />
-  </div>
-  <div>
-    <label></label>
+    <label>토익점수</label>
     <input type="text" name="toeic" />
   </div>
   <div>
-    <label></label>
-    <input type="text" name="j_ex" />
+    <label>일본어</label>
+    <input type="radio" name="japan" value="j_ex">탁월함
+    <input type="radio" name="japan" value="j_good">잘함
+    <input type="radio" name="japan" value="j_well">보통
+    <input type="radio" name="japan" value="j_poor">미흡
   </div>
   <div>
-    <label></label>
-    <input type="text" name="j_good" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="j_well" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="j_poor" />
-  </div>
-  <div>
-    <label></label>
+    <label>JPT점수</label>
     <input type="text" name="jlpt" />
   </div>
   <div>
-    <label></label>
+    <label>기타 언어</label>
     <input type="text" name="etc_lang" />
   </div>
   <div>
-    <label></label>
-    <input type="text" name="com_ex" />
+    <label>기본 OA</label>
+    <input type="radio" name="oa" value="com_ex">탁월함
+    <input type="radio" name="oa" value="com_good">잘함
+    <input type="radio" name="oa" value="com_well">보통
+    <input type="radio" name="oa" value="com_poor">미흡
   </div>
   <div>
-    <label></label>
-    <input type="text" name="com_good" />
+    <label>프로그래밍</label>
+    <input type="radio" name="pro" value="pro_ex">탁월함
+    <input type="radio" name="pro" value="pro_good">잘함
+    <input type="radio" name="pro" value="pro_well">보통
+    <input type="radio" name="pro" value="pro_poor">미흡
   </div>
   <div>
-    <label></label>
-    <input type="text" name="com_well" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="com_poor" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="pro_ex" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="pro_good" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="pro_well" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="pro_poor" />
-  </div>
-  <div>
-    <label></label>
+    <label>컴퓨터 관련 기타</label>
     <input type="text" name="etc_com" />
   </div>
   <div>
-    <label></label>
+    <label>기타개인능력</label>
     <input type="text" name="etc_ability" />
   </div>
 
