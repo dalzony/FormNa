@@ -1,83 +1,80 @@
 [% meta.title = '이력서 생성' -%]
 	
 <form  action="[% c.uri_for('form_create_do') %]"  method="post" enctype="multipart/form-data">
+<h3>1. 기초자료</h3>
   <div>
-    <label></label>
+    <label>성명</label>
     <input type="text" name="name" />
   </div>
   <div>
-    <label></label>
+    <label>증명사진</label>
     <input type="file" name="image"/>
   </div>
   <div>
-    <label></label>
+    <label>성명(영문)</label>
     <input type="text" name="name_e" />
   </div>
   <div>
-    <label></label>
+    <label>희망지원(부서)</label>
     <input type="text" name="choice" />
   </div>
   <div>
-    <label></label>
-    <input type="text" name="security_num" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="choice" />
-  </div>
-  <div>  
-    <label></label>
+    <label>주민등록번호</label>
     <input type="text" name="security_num" />
   </div>
   <div> 
-    <label></label>
+    <label>E-mail</label>
     <input type="text" name="email" />
   </div>
   <div>  
-    <label></label>
+    <label>전화번호</label>
     <input type="text" name="phone" />
   </div>
   <div> 
-    <label></label>
+    <label>휴대번호</label>
     <input type="text" name="cell_p" />
   </div>
   <div>
-    <label></label>
+    <label>주소</label>
     <input type="text" name="address" />
   </div>
+
+<h3>2. 병역 및 보훈 사항<h3>
   <div> 
-    <label></label>
+    <label> 제대구분</label>
     <input type="text" name="army" />
   </div>
   <div>
-    <label></label>
+    <label>보훈대상</label>
     <input type="text" name="veteran" />
   </div>
   <div>
-    <label></label>
+    <label>면제사유</label>
     <input type="text" name="exemption" />
   </div>
   <div>
-    <label></label>
+    <label>복무기간</label>
     <input type="text" name="term_a" />
   </div>
   <div>
-    <label></label>
+    <label>군별</label>
     <input type="text" name="section" />
   <div>
   </div>
   <div>
-    <label></label>
+    <label>병과</label>
     <input type="text" name="service" />
   </div>
   <div>
-    <label></label>
+    <label>계급</label>
     <input type="text" name="rank" />
   </div>
   <div>
-    <label></label>
+    <label>기타사항</label>
     <input type="text" name="etc_a" />
   </div>
+<h3>3.학력사항</h3>
+  표로하
   <div>
     <label></label>
     <input type="text" name="term_s_1" />
@@ -174,8 +171,11 @@
     <label></label>
     <input type="text" name="position_4" />
   </div>
+// 여기까지
+여기는 라디오 버튼
+<h3>5.개인능력</h3>
   <div>
-    <label></label>
+    <label>영어</label>
     <input type="text" name="en_ex" />
   </div>
   <div>
@@ -258,6 +258,8 @@
     <label></label>
     <input type="text" name="etc_ability" />
   </div>
+
+<h3>6자격증</h3>
   <div>
     <label></label>
     <input type="text" name="date_1" />
