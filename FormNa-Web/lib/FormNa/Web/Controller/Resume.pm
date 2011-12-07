@@ -143,25 +143,27 @@ sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
     my $day             = $dt->day;
 
     my $time = time;
-    if ( $c->request->params->{'form_submit'} eq 'yes' ) {
-
-            if ( my $upload = $c->request->upload('image') ) {
-
-                #my $filename = $upload->filename;
-                my $filename = sprintf "%s-%s", $time, $upload->filename;
-                my $target   =   sprintf "%s/result/%s",$c->config->{odt}{root_resume},$filename;
-
-                unless ( $upload->link_to($target) || $upload->copy_to($target) ) {
-                    die( "Failed to copy '$filename' to '$target': $!" );
-                }
-            }
-        }
+    my $target;
+#    if ( $c->request->params->{'form_submit'} eq 'yes' ) {
+#
+#            if ( my $upload = $c->request->upload('image') ) {
+#
+#                #my $filename = $upload->filename;
+#                my $filename = sprintf "%s-%s", $time, $upload->filename;
+#                $target   =   sprintf "%s/result/%s",$c->config->{odt}{root_resume},$filename;
+#
+#                unless ( $upload->link_to($target) || $upload->copy_to($target) ) {
+#                    die( "Failed to copy '$filename' to '$target': $!" );
+#                }
+#            }
+#        }
     
     my %formna_config;
     
     $formna_config{templates}{'content.xml'} = {
         name          => $name,
         name_en       => $name_en,
+	tartget	=> "\"$target\"",
         choice        => $choice,
         security_num  => $security_num,
         choice        => $choice,
