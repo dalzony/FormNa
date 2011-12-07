@@ -1,0 +1,29 @@
+* {
+    padding: 0; margin: 0;
+    color: black;
+}
+img {
+    border: 0;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#wrap {
+    width: 870px;
+    margin: 0 auto;
+}
+#head {
+    margin: 24px 0;
+}
+#logo {
+    display: block;
+    margin: 0 auto;
+}
+#foot {
+    margin: 40px 0;
+    font-size: 14px;
+    text-align: center;
+}

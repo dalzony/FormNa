@@ -1,0 +1,38 @@
+#head menu {
+    margin-top: 14px;
+    margin-bottom: 40px;
+    text-align: center;
+    list-style-type: none;
+}
+#head menu li {
+    position: relative;
+    display: inline-block;
+    margin: 0 37px;
+}
+#head menu li img {
+    position: absolute;
+    top: -11px;
+    left: -45px;
+}
+#form .label {
+    width: 220px;
+    text-align: right;
+    padding: 4px 8px 4px 4px;
+}
+#form .input input {
+    width: 200px;
+}
+#form .input.short input {
+    width: 110px;
+}
+#form .input.long input {
+    width: 300px;
+}
+#form .button {
+    padding-top: 20px;
+}
+#form .button input {
+    margin-right: 8px;
+    padding: 7px;
+    width: 80px;
+}
