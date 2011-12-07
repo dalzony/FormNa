@@ -1,326 +1,335 @@
 [% meta.title = '이력서 생성' -%]
-	
+
 <form  action="[% c.uri_for('form_create_do') %]"  method="post" enctype="multipart/form-data">
-<h3>1. 기초자료</h3>
-  <div>
-    <label>성명</label>
-    <input type="text" name="name" />
-  </div>
-  <div>
-    <label>증명사진</label>
-    <input type="file" name="image"/>
-  </div>
-  <div>
-    <label>성명(영문)</label>
-    <input type="text" name="name_e" />
-  </div>
-  <div>
-    <label>희망지원(부서)</label>
-    <input type="text" name="choice" />
-  </div>
-  <div>
-    <label>주민등록번호</label>
-    <input type="text" name="security_num" />
-  </div>
-  <div> 
-    <label>E-mail</label>
-    <input type="text" name="email" />
-  </div>
-  <div>  
-    <label>전화번호</label>
-    <input type="text" name="phone" />
-  </div>
-  <div> 
-    <label>휴대번호</label>
-    <input type="text" name="cell_p" />
-  </div>
-  <div>
-    <label>주소</label>
-    <input type="text" name="address" />
-  </div>
+  <table id="form">
+    <tr class="title"><td></td><td><h3>1. 기초자료</h3></td></tr>
+    <tr>
+      <td class="label"><label>성명</label></td>
+      <td class="input"><input type="text" name="name" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label>증명사진</label></td>
+      <td class="input"><input type="file" name="image"/></td>
+    </tr>
+    <tr>
+      <td class="label"><label>성명(영문)</label></td>
+      <td class="input"><input type="text" name="name_e" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label>희망지원(부서)</label></td>
+      <td class="input"><input type="text" name="choice" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label>주민등록번호</label></td>
+      <td class="input"><input type="text" name="security_num" /></td>
+    </tr>
+    <tr> 
+      <td class="label"><label>E-mail</label></td>
+      <td class="input"><input type="text" name="email" /></td>
+    </tr>
+    <tr>  
+      <td class="label"><label>전화번호</label></td>
+      <td class="input"><input type="text" name="phone" /></td>
+    </tr>
+    <tr> 
+      <td class="label"><label>휴대번호</label></td>
+      <td class="input"><input type="text" name="cell_p" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label>주소</label></td>
+      <td class="input"><input type="text" name="address" /></td>
+    </tr>
 
-<h3>2. 병역 및 보훈 사항</h3>
-  <div> 
-    <label> 제대구분</label>
-    <input type="text" name="army" />
-  </div>
-  <div>
-    <label>보훈대상</label>
-    <input type="text" name="veteran" />
-  </div>
-  <div>
-    <label>면제사유</label>
-    <input type="text" name="exemption" />
-  </div>
-  <div>
-    <label>복무기간</label>
-    <input type="text" name="term_a" />
-  </div>
-  <div>
-    <label>군별</label>
-    <input type="text" name="section" />
-  <div>
-  </div>
-  <div>
-    <label>병과</label>
-    <input type="text" name="service" />
-  </div>
-  <div>
-    <label>계급</label>
-    <input type="text" name="rank" />
-  </div>
-  <div>
-    <label>기타사항</label>
-    <input type="text" name="etc_a" />
-  </div>
-<h3>3.학력사항</h3>
-  표로하
-  <div>
-    <label></label>
-    <input type="text" name="term_s_1" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="term_s_2" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="name_s_1" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="name_s_2" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="major_1" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="major_2" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="score_s_1" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="score_s_2" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="term_c_1" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="term_c_2" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="term_c_3" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="term_c_4" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="name_c_1" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="name_c_2" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="name_c_3" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="name_c_4" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="part_c_1" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="part_c_2" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="part_c_3" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="part_c_4" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="position_1" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="position_2" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="position_3" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="position_4" />
-  </div>
-// 여기까지
-<h3>5.개인능력</h3>
-  <div>
-    <label>영어</label>
-    <input type="radio" name="english" value="en_ex">탁월함
-    <input type="radio" name="english" value="en_good">잘함
-    <input type="radio" name="english" value="en_well">보통
-    <input type="radio" name="english" value="en_poor">미흡
-  </div>
-  <div>
-    <label>토익점수</label>
-    <input type="text" name="toeic" />
-  </div>
-  <div>
-    <label>일본어</label>
-    <input type="radio" name="japan" value="j_ex">탁월함
-    <input type="radio" name="japan" value="j_good">잘함
-    <input type="radio" name="japan" value="j_well">보통
-    <input type="radio" name="japan" value="j_poor">미흡
-  </div>
-  <div>
-    <label>JPT점수</label>
-    <input type="text" name="jlpt" />
-  </div>
-  <div>
-    <label>기타 언어</label>
-    <input type="text" name="etc_lang" />
-  </div>
-  <div>
-    <label>기본 OA</label>
-    <input type="radio" name="oa" value="com_ex">탁월함
-    <input type="radio" name="oa" value="com_good">잘함
-    <input type="radio" name="oa" value="com_well">보통
-    <input type="radio" name="oa" value="com_poor">미흡
-  </div>
-  <div>
-    <label>프로그래밍</label>
-    <input type="radio" name="pro" value="pro_ex">탁월함
-    <input type="radio" name="pro" value="pro_good">잘함
-    <input type="radio" name="pro" value="pro_well">보통
-    <input type="radio" name="pro" value="pro_poor">미흡
-  </div>
-  <div>
-    <label>컴퓨터 관련 기타</label>
-    <input type="text" name="etc_com" />
-  </div>
-  <div>
-    <label>기타개인능력</label>
-    <input type="text" name="etc_ability" />
-  </div>
+    <tr class="title"><td></td><td><h3>2. 병역 및 보훈 사항</h3></td></tr>
+    <tr> 
+      <td class="label"><label> 제대구분</label></td>
+      <td class="input"><input type="text" name="army" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label>보훈대상</label></td>
+      <td class="input"><input type="text" name="veteran" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label>면제사유</label></td>
+      <td class="input"><input type="text" name="exemption" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label>복무기간</label></td>
+      <td class="input"><input type="text" name="term_a" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label>군별</label></td>
+      <td class="input"><input type="text" name="section" /></td>
+    <tr>
+    </tr>
+    <tr>
+      <td class="label"><label>병과</label></td>
+      <td class="input"><input type="text" name="service" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label>계급</label></td>
+      <td class="input"><input type="text" name="rank" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label>기타사항</label></td>
+      <td class="input"><input type="text" name="etc_a" /></td>
+    </tr>
+    <tr class="title"><td></td><td><h3>3. 학력사항</h3></td></tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="term_s_1" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="term_s_2" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="name_s_1" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="name_s_2" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="major_1" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="major_2" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="score_s_1" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="score_s_2" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="term_c_1" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="term_c_2" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="term_c_3" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="term_c_4" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="name_c_1" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="name_c_2" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="name_c_3" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="name_c_4" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="part_c_1" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="part_c_2" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="part_c_3" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="part_c_4" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="position_1" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="position_2" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="position_3" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="position_4" /></td>
+    </tr>
+    <tr class="title"><td></td><td><h3>5. 개인능력</h3></td></tr>
+    <tr>
+      <td class="label"><label>영어</label></td>
+      <td class="radio">
+        <input type="radio" name="english" value="en_ex">탁월함
+        <input type="radio" name="english" value="en_good">잘함
+        <input type="radio" name="english" value="en_well">보통
+        <input type="radio" name="english" value="en_poor">미흡
+      </td>
+    </tr>
+    <tr>
+      <td class="label"><label>토익점수</label></td>
+      <td class="input"><input type="text" name="toeic" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label>일본어</label></td>
+      <td class="radio">
+        <input type="radio" name="japan" value="j_ex">탁월함
+        <input type="radio" name="japan" value="j_good">잘함
+        <input type="radio" name="japan" value="j_well">보통
+        <input type="radio" name="japan" value="j_poor">미흡
+      </td>
+    </tr>
+    <tr>
+      <td class="label"><label>JPT점수</label></td>
+      <td class="input"><input type="text" name="jlpt" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label>기타 언어</label></td>
+      <td class="input"><input type="text" name="etc_lang" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label>기본 OA</label></td>
+      <td class="radio">
+        <input type="radio" name="oa" value="com_ex">탁월함
+        <input type="radio" name="oa" value="com_good">잘함
+        <input type="radio" name="oa" value="com_well">보통
+        <input type="radio" name="oa" value="com_poor">미흡
+      </td>
+    </tr>
+    <tr>
+      <td class="label"><label>프로그래밍</label></td>
+      <td class="radio">
+        <input type="radio" name="pro" value="pro_ex">탁월함
+        <input type="radio" name="pro" value="pro_good">잘함
+        <input type="radio" name="pro" value="pro_well">보통
+        <input type="radio" name="pro" value="pro_poor">미흡
+      </td>
+    </tr>
+    <tr>
+      <td class="label"><label>컴퓨터 관련 기타</label></td>
+      <td class="input"><input type="text" name="etc_com" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label>기타개인능력</label></td>
+      <td class="input"><input type="text" name="etc_ability" /></td>
+    </tr>
 
-<h3>6자격증</h3>
-  <div>
-    <label></label>
-    <input type="text" name="date_1" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="date_2" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="date_3" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="date_4" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="licence_1" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="licence_2" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="licence_3" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="licence_4" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="organ_1" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="organ_2" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="organ_3" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="organ_4" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="term_v_1" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="term_v_2" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="term_v_3" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="organ_v_1" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="organ_v_2" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="organ_v_3" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="activity_1" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="activity_2" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="activity_3" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="year" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="month" />
-  </div>
-  <div>
-    <label></label>
-    <input type="text" name="day" />
-  </div>
-  <div>
-    <input type="submit" value="뿅" />
-  </div>
+    <tr><td></td><td><h3>6. 자격증</h3></td></tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="date_1" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="date_2" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="date_3" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="date_4" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="licence_1" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="licence_2" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="licence_3" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="licence_4" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="organ_1" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="organ_2" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="organ_3" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="organ_4" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="term_v_1" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="term_v_2" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="term_v_3" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="organ_v_1" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="organ_v_2" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="organ_v_3" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="activity_1" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="activity_2" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="activity_3" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="year" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="month" /></td>
+    </tr>
+    <tr>
+      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="day" /></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td class="button"><input type="submit" value="뿅" /></td>
+    </tr>
+    <table>
 </form>
 
