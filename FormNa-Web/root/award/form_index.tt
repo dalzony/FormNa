@@ -5,11 +5,11 @@
 
   <tr>
     <td class="label"><label>상장 번호</label></td>
-    <td class="input"><input type="text" name="num"/></td>
+    <td class="input"><input type="text" name="num" value="150"/></td>
   </tr>
  <!-- 여긴 딱히 줄 필요 없을 것 같다.
    <tr>
-     <td class="label"><label>상장( 또는 공로상... 그런거)</label>  </td>
+     <td class="label"><label>상장( 또는 공로상... 그런거)</label></td>
      <td class="input"><input type="text" name="subject"/></td>
   </tr>
 --->
@@ -21,7 +21,7 @@
 -->
   <tr>
     <td class="label"><label>수여자 이름</label></td>
-    <td class="input"><input type="text" name="receiver"/></td>
+    <td class="input"><input type="text" name="receiver" value="가  카" /></td>
   </tr>
   <tr>
 <!--
@@ -32,11 +32,11 @@
 -->
   <tr>
     <td class="label"><label>주는 단체</label></td>
-    <td class="input"><input type="text" name="organ"/></td>
+    <td class="input"><input type="text" name="organ" value="(주)분노한 평범한 국민들" /></td>
   </tr>
   <tr>
     <td class="label"><label>대표자 서명</label></td>
-    <td class="input"><input type="text" name="organ_president"/></td>
+    <td class="input"><input type="text" name="organ_president" value="홍길동" /></td>
   </tr>
   <tr>
     <td></td><td class="button"><input type="submit" value="짜잔" /></td>
