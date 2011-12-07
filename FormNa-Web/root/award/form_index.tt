@@ -2,10 +2,7 @@
 
 <form  action="[% c.uri_for('form_create_do') %]"  method="post" enctype="multipart/form-data">
 <table id="form">
-  <tr>
-    <td class="label"><label>수여자 이름// 여기 박스나오게</label></td>
-    <td class="input"><input type="text" name="name"/></td>
-  </tr>
+
   <tr>
     <td class="label"><label>상장 번호</label></td>
     <td class="input"><input type="text" name="num"/></td>
@@ -18,12 +15,12 @@
 --->
  <!-- 여긴 FTA관련 문구로
   <tr>
-    <td class="label"><label>어떤상(예 : 솔로대상)</label></td>
+    <td class="label"><label>어떤 상(예 : 솔로대상)</label></td>
     <td class="input"><input type="text" name="award_name"/></td>
   </tr>
 -->
   <tr>
-    <td class="label"><label>이게 수여자인가 ..</label></td>
+    <td class="label"><label>수여자 이름</label></td>
     <td class="input"><input type="text" name="receiver"/></td>
   </tr>
   <tr>
@@ -32,29 +29,17 @@
     <td class="label"><label>상장 내용</label></td>
     <td class="input"><input type="text" name="comment"/></td>
   </tr>
-  <tr>
-    <td class="label"><label>수여 날짜</label></td>
-    <td class="input"><input type="text" name="year"/></td>
-  </tr>
-  <tr>
-    <td class="label"><label></label></td>
-    <td class="input"><input type="text" name="month"/></td>
-  </tr>
-  <tr>
-    <td class="label"><label></label></td>
-    <td class="input"><input type="text" name="day"/></td>
-  </tr>
 -->
   <tr>
     <td class="label"><label>주는 단체</label></td>
     <td class="input"><input type="text" name="organ"/></td>
   </tr>
   <tr>
-    <td class="label"><label>주는 사람 대표</label></td>
+    <td class="label"><label>대표자 서명</label></td>
     <td class="input"><input type="text" name="organ_president"/></td>
   </tr>
   <tr>
-    <td></td><td class="button"><input type="submit" value="뿅~" /></td>
+    <td></td><td class="button"><input type="submit" value="짜잔" /></td>
   </tr>
 </table>
 </form>
