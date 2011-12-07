@@ -6,15 +6,24 @@ use warnings;
  
 use OpenDocument::Template;
  
-my $template_dir = 'test-odt/templates';
-my $src          = 'test-odt/template.odt';
-my $dest         = 'test-odt/result/result.odt';
+my $name  = "이민선"
+my %date  = ( 
+        "y"=>"2011",
+        "m"=>"12",
+        "d"=>"8",
+);
+
+my $time=time;
+
+my $template_dir = 'templates';
+my $src          = 'template.odt';
+my $dest = sprintf "templates/result/%s-%s.odt", $time,$name;
  
 my %config_file;
- 
+
 $config_file{templates}{'content.xml'} = {
-    test    => 'English',
-    korean   => '한글',
+    name    => $name,
+    date      => \%date,
 };
  
 my $odt = OpenDocument::Template->new(
@@ -22,5 +31,5 @@ my $odt = OpenDocument::Template->new(
     template_dir => $template_dir,
     src          => $src,
     dest         => $dest,
-
+);
 $odt->generate;
