@@ -2,268 +2,356 @@
 	
 <form  action="[% c.uri_for('form_create_do') %]"  method="post" enctype="multipart/form-data">
   <div>
+    <label></label>
     <input type="text" name="name" />
   </div>
   <div>
+    <label></label>
     <input type="file" name="image"/>
   </div>
   <div>
+    <label></label>
     <input type="text" name="name_e" />
   </div>
   <div>
-    <input type="text" name="choice" />
-  </div>
-  <div>   
-    <input type="text" name="security_num" />
-  </div>
-  <div>   
+    <label></label>
     <input type="text" name="choice" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="security_num" />
   </div>
   <div>
+    <label></label>
+    <input type="text" name="choice" />
+  </div>
+  <div>  
+    <label></label>
+    <input type="text" name="security_num" />
+  </div>
+  <div> 
+    <label></label>
     <input type="text" name="email" />
   </div>
-  <div>
+  <div>  
+    <label></label>
     <input type="text" name="phone" />
   </div>
-  <div>
+  <div> 
+    <label></label>
     <input type="text" name="cell_p" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="address" />
   </div>
-  <div>
+  <div> 
+    <label></label>
     <input type="text" name="army" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="veteran" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="exemption" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_a" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="section" />
   <div>
   </div>
   <div>
+    <label></label>
     <input type="text" name="service" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="rank" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="etc_a" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_s_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_s_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="name_s_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="name_s_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="major_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="major_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="score_s_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="score_s_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_c_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_c_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_c_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_c_4" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="name_c_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="name_c_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="name_c_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="name_c_4" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="part_c_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="part_c_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="part_c_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="part_c_4" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="position_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="position_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="position_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="position_4" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="en_ex" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="en_good" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="en_well" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="en_poor" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="toeic" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="j_ex" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="j_good" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="j_well" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="j_poor" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="jlpt" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="etc_lang" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="com_ex" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="com_good" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="com_well" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="com_poor" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="pro_ex" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="pro_good" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="pro_well" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="pro_poor" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="etc_com" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="etc_ability" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="date_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="date_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="date_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="date_4" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="licence_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="licence_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="licence_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="licence_4" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="organ_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="organ_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="organ_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="organ_4" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_v_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_v_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_v_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="organ_v_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="organ_v_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="organ_v_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="activity_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="activity_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="activity_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="year" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="month" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="day" />
   </div>
   <div>
