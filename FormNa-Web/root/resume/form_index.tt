@@ -1,269 +1,322 @@
 [% meta.title = '이력서 생성' -%]
 	
 <form  action="[% c.uri_for('form_create_do') %]"  method="post" enctype="multipart/form-data">
+<h3>1. 기초자료</h3>
   <div>
+    <label>성명</label>
     <input type="text" name="name" />
   </div>
   <div>
+    <label>증명사진</label>
     <input type="file" name="image"/>
   </div>
   <div>
+    <label>성명(영문)</label>
     <input type="text" name="name_e" />
   </div>
   <div>
-    <input type="text" name="choice" />
-  </div>
-  <div>   
-    <input type="text" name="security_num" />
-  </div>
-  <div>   
+    <label>희망지원(부서)</label>
     <input type="text" name="choice" />
   </div>
   <div>
+    <label>주민등록번호</label>
     <input type="text" name="security_num" />
   </div>
-  <div>
+  <div> 
+    <label>E-mail</label>
     <input type="text" name="email" />
   </div>
-  <div>
+  <div>  
+    <label>전화번호</label>
     <input type="text" name="phone" />
   </div>
-  <div>
+  <div> 
+    <label>휴대번호</label>
     <input type="text" name="cell_p" />
   </div>
   <div>
+    <label>주소</label>
     <input type="text" name="address" />
   </div>
-  <div>
+
+<h3>2. 병역 및 보훈 사항</h3>
+  <div> 
+    <label> 제대구분</label>
     <input type="text" name="army" />
   </div>
   <div>
+    <label>보훈대상</label>
     <input type="text" name="veteran" />
   </div>
   <div>
+    <label>면제사유</label>
     <input type="text" name="exemption" />
   </div>
   <div>
+    <label>복무기간</label>
     <input type="text" name="term_a" />
   </div>
   <div>
+    <label>군별</label>
     <input type="text" name="section" />
   <div>
   </div>
   <div>
+    <label>병과</label>
     <input type="text" name="service" />
   </div>
   <div>
+    <label>계급</label>
     <input type="text" name="rank" />
   </div>
   <div>
+    <label>기타사항</label>
     <input type="text" name="etc_a" />
   </div>
+<h3>3.학력사항</h3>
+  표로하
   <div>
+    <label></label>
     <input type="text" name="term_s_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_s_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="name_s_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="name_s_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="major_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="major_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="score_s_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="score_s_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_c_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_c_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_c_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_c_4" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="name_c_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="name_c_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="name_c_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="name_c_4" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="part_c_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="part_c_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="part_c_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="part_c_4" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="position_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="position_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="position_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="position_4" />
   </div>
+// 여기까지
+<h3>5.개인능력</h3>
   <div>
-    <input type="text" name="en_ex" />
+    <label>영어</label>
+    <input type="radio" name="english" value="en_ex">탁월함
+    <input type="radio" name="english" value="en_good">잘함
+    <input type="radio" name="english" value="en_well">보통
+    <input type="radio" name="english" value="en_poor">미흡
   </div>
   <div>
-    <input type="text" name="en_good" />
-  </div>
-  <div>
-    <input type="text" name="en_well" />
-  </div>
-  <div>
-    <input type="text" name="en_poor" />
-  </div>
-  <div>
+    <label>토익점수</label>
     <input type="text" name="toeic" />
   </div>
   <div>
-    <input type="text" name="j_ex" />
+    <label>일본어</label>
+    <input type="radio" name="japan" value="j_ex">탁월함
+    <input type="radio" name="japan" value="j_good">잘함
+    <input type="radio" name="japan" value="j_well">보통
+    <input type="radio" name="japan" value="j_poor">미흡
   </div>
   <div>
-    <input type="text" name="j_good" />
-  </div>
-  <div>
-    <input type="text" name="j_well" />
-  </div>
-  <div>
-    <input type="text" name="j_poor" />
-  </div>
-  <div>
+    <label>JPT점수</label>
     <input type="text" name="jlpt" />
   </div>
   <div>
+    <label>기타 언어</label>
     <input type="text" name="etc_lang" />
   </div>
   <div>
-    <input type="text" name="com_ex" />
+    <label>기본 OA</label>
+    <input type="radio" name="oa" value="com_ex">탁월함
+    <input type="radio" name="oa" value="com_good">잘함
+    <input type="radio" name="oa" value="com_well">보통
+    <input type="radio" name="oa" value="com_poor">미흡
   </div>
   <div>
-    <input type="text" name="com_good" />
+    <label>프로그래밍</label>
+    <input type="radio" name="pro" value="pro_ex">탁월함
+    <input type="radio" name="pro" value="pro_good">잘함
+    <input type="radio" name="pro" value="pro_well">보통
+    <input type="radio" name="pro" value="pro_poor">미흡
   </div>
   <div>
-    <input type="text" name="com_well" />
-  </div>
-  <div>
-    <input type="text" name="com_poor" />
-  </div>
-  <div>
-    <input type="text" name="pro_ex" />
-  </div>
-  <div>
-    <input type="text" name="pro_good" />
-  </div>
-  <div>
-    <input type="text" name="pro_well" />
-  </div>
-  <div>
-    <input type="text" name="pro_poor" />
-  </div>
-  <div>
+    <label>컴퓨터 관련 기타</label>
     <input type="text" name="etc_com" />
   </div>
   <div>
+    <label>기타개인능력</label>
     <input type="text" name="etc_ability" />
   </div>
+
+<h3>6자격증</h3>
   <div>
+    <label></label>
     <input type="text" name="date_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="date_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="date_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="date_4" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="licence_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="licence_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="licence_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="licence_4" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="organ_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="organ_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="organ_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="organ_4" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_v_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_v_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="term_v_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="organ_v_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="organ_v_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="organ_v_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="activity_1" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="activity_2" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="activity_3" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="year" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="month" />
   </div>
   <div>
+    <label></label>
     <input type="text" name="day" />
   </div>
   <div>
