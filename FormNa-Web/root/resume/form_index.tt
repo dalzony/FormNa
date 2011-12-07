@@ -13,6 +13,10 @@
       <td class="input"><input type="file" name="image"/></td>
     </tr>
     <tr>
+       <td></td>
+        <td>현재 파일 업로드가 지원되지 않습니다.</td>
+    </tr>
+    <tr>
       <td class="label"><label>성명(영문)</label></td>
       <td class="input"><input type="text" name="name_e" /></td>
     </tr>
