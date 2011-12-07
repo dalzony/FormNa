@@ -76,99 +76,53 @@
     </tr>
     <tr class="title"><td></td><td><h3>3. 학력사항</h3></td></tr>
     <tr>
-      <td class="label"><label></label></td>
+      <td class="label"><label>기간</label></td>
+      <td class="label"><label>학교명</label></td>
+      <td class="label"><label>학과</label></td>
+      <td class="label"><label>성적(득점/만점)</label></td>
+    </tr>
+    <tr>
       <td class="input"><input type="text" name="term_s_1" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="term_s_2" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
       <td class="input"><input type="text" name="name_s_1" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="name_s_2" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
       <td class="input"><input type="text" name="major_1" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="major_2" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
       <td class="input"><input type="text" name="score_s_1" /></td>
     </tr>
     <tr>
-      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="term_s_2" /></td>
+      <td class="input"><input type="text" name="name_s_2" /></td>
+      <td class="input"><input type="text" name="major_2" /></td>
       <td class="input"><input type="text" name="score_s_2" /></td>
     </tr>
+ 
+    <tr class="title"><td></td><td><h3>4. 경력사항</h3></td></tr>
     <tr>
-      <td class="label"><label></label></td>
+      <td class="label"><label>기간</label></td>
+      <td class="label"><label>회사명</label></td>
+      <td class="label"><label>부서</label></td>
+      <td class="label"><label>직위/직급</label></td>
+    </tr>
+    <tr>
       <td class="input"><input type="text" name="term_c_1" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="term_c_2" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="term_c_3" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="term_c_4" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
       <td class="input"><input type="text" name="name_c_1" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="name_c_2" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="name_c_3" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="name_c_4" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
       <td class="input"><input type="text" name="part_c_1" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="part_c_2" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="part_c_3" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="part_c_4" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
       <td class="input"><input type="text" name="position_1" /></td>
     </tr>
     <tr>
-      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="term_c_2" /></td>
+      <td class="input"><input type="text" name="name_c_2" /></td>
+      <td class="input"><input type="text" name="part_c_2" /></td>
       <td class="input"><input type="text" name="position_2" /></td>
     </tr>
     <tr>
-      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="term_c_3" /></td>
+      <td class="input"><input type="text" name="name_c_3" /></td>
+      <td class="input"><input type="text" name="part_c_3" /></td>
       <td class="input"><input type="text" name="position_3" /></td>
     </tr>
     <tr>
-      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="term_c_4" /></td>
+      <td class="input"><input type="text" name="name_c_4" /></td>
+      <td class="input"><input type="text" name="part_c_4" /></td>
       <td class="input"><input type="text" name="position_4" /></td>
     </tr>
     <tr class="title"><td></td><td><h3>5. 개인능력</h3></td></tr>
@@ -231,104 +185,54 @@
 
     <tr class="title"><td></td><td><h3>6. 자격증</h3></td></tr>
     <tr>
-      <td class="label"><label></label></td>
+      <td class="label"><label>취득년월일</label></td>
+      <td class="label"><label>자격증</label></td>
+      <td class="label"><label>발급기관</label></td>
+    </tr>
+    <tr>
       <td class="input"><input type="text" name="date_1" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="date_2" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="date_3" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="date_4" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
       <td class="input"><input type="text" name="licence_1" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="licence_2" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="licence_3" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="licence_4" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
       <td class="input"><input type="text" name="organ_1" /></td>
     </tr>
     <tr>
-      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="date_2" /></td>
+      <td class="input"><input type="text" name="licence_2" /></td>
       <td class="input"><input type="text" name="organ_2" /></td>
     </tr>
     <tr>
-      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="date_3" /></td>
+      <td class="input"><input type="text" name="licence_3" /></td>
       <td class="input"><input type="text" name="organ_3" /></td>
     </tr>
     <tr>
-      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="date_4" /></td>
+      <td class="input"><input type="text" name="licence_4" /></td>
       <td class="input"><input type="text" name="organ_4" /></td>
     </tr>
+    <tr class="title"><td></td><td><h3>7. 봉사활동</h3></td></tr>
     <tr>
-      <td class="label"><label></label></td>
+      <td class="label"><label>기간</label></td>
+      <td class="label"><label>기관/단체명</label></td>
+      <td class="label"><label>활동내용</label></td>
+    </tr>
+    <tr>
       <td class="input"><input type="text" name="term_v_1" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="term_v_2" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="term_v_3" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
       <td class="input"><input type="text" name="organ_v_1" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="organ_v_2" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="organ_v_3" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
       <td class="input"><input type="text" name="activity_1" /></td>
     </tr>
     <tr>
-      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="term_v_2" /></td>
+      <td class="input"><input type="text" name="organ_v_2" /></td>
       <td class="input"><input type="text" name="activity_2" /></td>
     </tr>
     <tr>
-      <td class="label"><label></label></td>
+      <td class="input"><input type="text" name="term_v_3" /></td>
+      <td class="input"><input type="text" name="organ_v_3" /></td>
       <td class="input"><input type="text" name="activity_3" /></td>
     </tr>
     <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="year" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="month" /></td>
-    </tr>
-    <tr>
-      <td class="label"><label></label></td>
-      <td class="input"><input type="text" name="day" /></td>
-    </tr>
-    <tr>
       <td>&nbsp;</td>
-      <td class="button"><input type="submit" value="뿅" /></td>
+      <td class="button"><input type="submit" value="이력서 나와라 뿅" /></td>
     </tr>
     <table>
 </form>
