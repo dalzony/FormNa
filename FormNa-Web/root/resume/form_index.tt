@@ -172,12 +172,17 @@
     <input type="text" name="position_4" />
   </div>
 // 여기까지
-여기는 라디오 버튼
 <h3>5.개인능력</h3>
   <div>
     <label>영어</label>
     <input type="text" name="en_ex" />
   </div>
+<div>
+<input type="radio" name="english" value="en_ex">탁월함
+<input type="radio" name="english" value="en_good">잘함
+<input type="radio" name="english" value="en_well">보통
+<input type="radio" name="english" value="en_poor">미흡
+</div>
   <div>
     <label></label>
     <input type="text" name="en_good" />

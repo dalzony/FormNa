@@ -90,10 +90,11 @@ sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
     my $position_2      = $c->req->param('position_2');
     my $position_3      = $c->req->param('position_3');
     my $position_4      = $c->req->param('position_4');
-    my $en_ex           = $c->req->param('en_ex');
-    my $en_good         = $c->req->param('en_good');
-    my $en_well         = $c->req->param('en_well');
-    my $en_poor         = $c->req->param('en_poor');
+    my $english		= $c->req->param('english');
+    my $en_ex           = ($english eq "en_ex")? 'o':'' ; 
+    my $en_good         = ($english eq "en_good")? 'o':'' ;
+    my $en_well         = ($english eq "en_well")? 'o':'' ;
+    my $en_poor         = ($english eq "en_poor")? 'o':'' ;
     my $toeic           = $c->req->param('toeic');
     my $j_ex            = $c->req->param('j_ex');
     my $j_good          = $c->req->param('j_good');
