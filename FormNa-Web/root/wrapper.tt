@@ -2,6 +2,11 @@
 <head>
   <title>FormNa</title>
   <link href="/static/css/global.css" rel="stylesheet" type="text/css" />
+  [% IF css == 'form' %]
+  <link href="/static/css/form.css" rel="stylesheet" type="text/css" />
+  [% ELSE %]
+  <link href="/static/css/index.css" rel="stylesheet" type="text/css" />
+  [% END %]
 </head>
 <body>
 <div id="wrap">
