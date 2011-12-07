@@ -39,7 +39,7 @@
     <input type="text" name="address" />
   </div>
 
-<h3>2. 병역 및 보훈 사항<h3>
+<h3>2. 병역 및 보훈 사항</h3>
   <div> 
     <label> 제대구분</label>
     <input type="text" name="army" />
