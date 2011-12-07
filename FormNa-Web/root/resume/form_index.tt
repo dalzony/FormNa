@@ -229,7 +229,7 @@
       <td class="input"><input type="text" name="etc_ability" /></td>
     </tr>
 
-    <tr><td></td><td><h3>6. 자격증</h3></td></tr>
+    <tr class="title"><td></td><td><h3>6. 자격증</h3></td></tr>
     <tr>
       <td class="label"><label></label></td>
       <td class="input"><input type="text" name="date_1" /></td>
