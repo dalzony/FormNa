@@ -1,4 +1,4 @@
- FormNa게 Form을 생성하자~
+FormNa게 Form을 생성하자~
 ======================
 
 -부제 : 가변데이터에 대해 문서 자동으로 생성하기
@@ -208,75 +208,89 @@ ODF의 css인 `style.xml`입니다. 이 두파일만 남기고 모두 지워도 
 - [ Perl ] Catalyst 를 이용한 웹 서비스 개발 #1 : http://jeen.tistory.com/93
 
 카탈리스트를 설치하고 나면 다음의 작업을 진행해 봅시다.
+다음 작업들은 순서에 관계 없으며,
+세 부분에서 모두 작업이 완성되야, form나는 서식 파일을 받아보실 수 있습니다.
 
 ### Controller에서
 
-sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
-    my ($self, $c) = @_;
-    
-    my $subject         = $c->req->param('subject');
-    my $short_comment   = $c->req->param('short_comment');
-    my $detail_comment  = $c->req->param('detail_comment');
-    my $picture         = $c->req->param('picture');
-    my $phone           = $c->req->param('phone');
-    my $name            = $c->req->param('name');
-    
-    
-    my %formna_config;
-    
-    $formna_config{templates}{'content.xml'} = {
-        subject        => $subject,
-        short_comment  => $short_comment,
-        detail_comment => $detail_comment,
-        picture        => $picture,
-        phone          => $phone,
-        name           => $name,
-    };
+사용자가 웹에서 입력한 값을 이용해, 서식 파일을 만들고자 합니다.
+아래 서브루틴에서는 `form_index.tt`파일에서 넘겨 준 변수를 가져와
+`content.xml`에 넘겨주는 과정입니다.
 
-    my $tpl_dir = sprintf "%s/templates", $c->config->{odt}{root_notice};
-    my $src = sprintf "%s/template.odt", $c->config->{odt}{root_notice};
-    my $time = time;
-    my $dst = sprintf "%s/result/%s.odt", $c->config->{odt}{root_notice}, $time;
+    #!perl
+    sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
+        my ($self, $c) = @_;
+        
+        my $subject         = $c->req->param('subject');
+        my $short_comment   = $c->req->param('short_comment');
+        my $detail_comment  = $c->req->param('detail_comment');
+        my $picture         = $c->req->param('picture');
+        my $phone           = $c->req->param('phone');
+        my $name            = $c->req->param('name');
+        
+        
+        my %formna_config;
+        
+        $formna_config{templates}{'content.xml'} = {
+            subject        => $subject,
+            short_comment  => $short_comment,
+            detail_comment => $detail_comment,
+            picture        => $picture,
+            phone          => $phone,
+            name           => $name,
+        };
     
-    my $odt = OpenDocument::Template->new(
-        config       => \%formna_config,
-        template_dir => $tpl_dir,
-    	  src          => $src,
-    	  dest         => $dst,
-    );
-    $odt->generate;
-    $c->log->debug("Generated $dst");
-    $c->res->headers->content_type('application/msword');
-    $c->res->headers->header("Content-Disposition" => 'attachment;filename="' . "$time.doc" . '";');
-    my $fh = IO::File->new( $dst, 'r' );
-    $c->res->body($fh);
-    undef $fh;
+        my $tpl_dir = sprintf "%s/templates", $c->config->{odt}{root_notice};
+        my $src = sprintf "%s/template.odt", $c->config->{odt}{root_notice};
+        my $time = time;
+        my $dst = sprintf "%s/result/%s.odt", $c->config->{odt}{root_notice}, $time;
+        
+        my $odt = OpenDocument::Template->new(
+            config       => \%formna_config,
+            template_dir => $tpl_dir,
+        	  src          => $src,
+        	  dest         => $dst,
+        );
+        $odt->generate;
+        $c->log->debug("Generated $dst");
+
+        $c->res->headers->content_type('application/msword');
+        $c->res->headers->header("Content-Disposition" => 'attachment;filename="' . "$time.doc" . '";');
+        my $fh = IO::File->new( $dst, 'r' );
+        $c->res->body($fh);
+        undef $fh;
+
+가장아래 5줄은, 사용자가 입력을 마치고 문서를 생성할 때,
+생성된 odt파일을 doc확장자로 다운받을 수 있게 하는 코드입니다.
 
 ### View단에서
 
-[% meta.title = '전단지 생성' -%]
-<form  action="[% c.uri_for('form_create_do') %]"  method="post" enctype="multipart/form-data">
-  <div>
-  <label>제목</label>
-    <input type="text" name="subject" />
-  </div>
+값을 넘겨 줄 부분을 다음과 같이 form으로 사용자에게 입력받습니다.
+
+    #!xml
+    [% meta.title = '전단지 생성' -%]
+    <form  action="[% c.uri_for('form_create_do') %]"  method="post" enctype="multipart/form-data">
+      <div>
+      <label>제목</label>
+        <input type="text" name="subject" />
+      </div>
+    ...(생략)...
 
 ### content.xml에서
 
-<text:p text:style-name="Standard">[% subject %]</text:p>
-<text:p text:style-name="Standard">[% short_comment %]</text:p>
-<text:p text:style-name="Standard">[% detail_comment %]</text:p>
-<text:p text:style-name="Standard">[% picture %]</text:p>
-<text:p text:style-name="Standard">[% phone %]</text:p>
-
-
-
-
 처음 크리스마스 카드를 만들 때 처럼 ODT를 생성한후 content.xml파일을 변경해봅니다.
+
+    #!xml
+    <text:p text:style-name="Standard">[% subject %]</text:p>
+    <text:p text:style-name="Standard">[% short_comment %]</text:p>
+    <text:p text:style-name="Standard">[% detail_comment %]</text:p>
+    <text:p text:style-name="Standard">[% picture %]</text:p>
+    <text:p text:style-name="Standard">[% phone %]</text:p>
 
 ## 결과 예제들
 
-다음과 같이 자주 쓰지만 적당한 양식이 없는 Form들을 만들어봤습니다.
+이제 위와 같은 작업들을 통해,
+다음과 같이 자주 쓰지만, 만들기는 귀찮은  Form들을 만들어봤습니다.
 
 - 이력서
 - 문어발 전단지
@@ -294,6 +308,36 @@ xxxx를 넣고 xxxx를 찾아 변수를 바꾸는 작업들이
 저도 처음엔 xxxx를 찾아 변수로 바꿨는데,
 애초에 template.odt를 만들당 시 변수를 받을 곳에
 `[% .. %]`를 써서 넣는다면 더욱 간편하게 이용하실수 있습니다.
+
+또 만들다 보니, odt파일에 글자가 `뷁뷁샭략`과 같이 들어갈 때도 있습니다.
+이것은 인코딩 문제로 다음과 같이, 카탈리스트의 각종 설정파일에서 utf8을 설정해서
+해결할 수 있습니다.
+
+`TT.pm`에서는 다음과 같이 `ENCODING => \`utf8\``을 추가해줍니다.
+
+    #!perl
+    __PACKAGE__->config(
+        TEMPLATE_EXTENSION => '.tt',
+        render_die => 1,
+        ENCODING => 'utf8',
+    );
+
+`FormNa/Web.pm`에서는 다음과 같이 `utf8`인코딩에 대한 내용을 설정합니다.
+
+    #!perl
+    use Catalyst qw/
+        -Debug
+        ConfigLoader
+        Static::Simple
+        Unicode::Encoding
+    /;
+
+마지막으로 config파일 에도 추가합니다.
+
+    #!plain
+    <View Default>
+        ENCODING                utf8
+    </View Default>
 
 
 삶에서의 응용
