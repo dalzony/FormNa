@@ -23,10 +23,6 @@
     </textarea></td>
   </tr>
   <tr>
-    <td class="label"><label>관련 그림</label></td>
-    <td class="input"><input type="text" name="picture" /></td>
-  </tr>
-  <tr>
     <td class="label"><label>전화번호</label>    </td>
     <td class="input"><input type="text" name="phone" /></td>
   </tr>

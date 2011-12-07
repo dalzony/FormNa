@@ -47,32 +47,31 @@ Take information from form and add to odt file
 sub form_create_do :Chained('index') :PathPart('form_create_do') :Args(0) {
     my ($self, $c) = @_;
     
-    my $name            = $c->req->param('name');
     my $num             = $c->req->param('num');
-    my $subject         = $c->req->param('subject');
-    my $award_name      = $c->req->param('award_name');
+    my $subject;#         = $c->req->param('subject');
+    my $award_name      = "공로상"; 
     my $receiver        = $c->req->param('receiver');
-    my $comment         = $c->req->param('comment');
-    my $year            = DateTime->now->year;
-    my $month           = DateTime->now->month;
-    my $day             = DateTime->now->day;
+    my $comment         = "상기인은 FTA법안이빠르게 통과하는데에 최선을 다했을뿐 아니라, 평소 행실이 부지런하고 치밀하여 5분 안에 날치기법안을 통과시킨 것에  대한 공로가 지대하여, 이 공로상을 수여함";
+    my $dt		= DateTime->now( time_zone=>'Asia/Seoul' );
+    my $year            = $dt->year;
+    my $month           = $dt->month;
+    my $day             = $dt->day;
     my $organ           = $c->req->param('organ');
     my $organ_president = $c->req->param('organ_president');
     
     my %formna_config;
     
     $formna_config{templates}{'content.xml'} = {
-        name            => $name,
         num             => $num,
         subject         => $subject,
         award_name      => $award_name,
         receiver        => $receiver,
         comment         => $comment,
         year            => $year,
-        month           => $month,
+        mon             => $month,
         day             => $day,
         organ           => $organ,
-        organ_president => $organ_president,
+        organ_p	        => $organ_president,
     };
 
     my $tpl_dir = sprintf "%s/templates", $c->config->{odt}{root_award};
