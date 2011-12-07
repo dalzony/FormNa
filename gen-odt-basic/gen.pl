@@ -6,7 +6,7 @@ use warnings;
  
 use OpenDocument::Template;
  
-my $name  = "이민선"
+my $name  = "이민선";
 my %date  = ( 
         "y"=>"2011",
         "m"=>"12",
