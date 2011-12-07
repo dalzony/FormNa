@@ -3,15 +3,24 @@
   <table id="form">
   <tr>
     <td class="label"><label>제목</label></td>
-    <td class="input"><input type="text" name="subject" /></td>
+    <td class="input"><input type="text" name="subject" value="전문과외"/></td>
   </tr>
   <tr>
     <td class="label"><label>강조할 문구</label></td>
-    <td class="input"><input type="text" name="short_comment" /></td>
+    <td class="input"><input type="text" name="short_comment" value="월 15만원 (고등 18만원)" /></td>
   </tr> 
   <tr>
     <td class="label"><label>상세 설명</label></td>
-    <td class="input"><input type="text" name="detail_comment" /></td>
+    <td class="input"><textarea rows="5" cols="30" name="detail_comment">
+3개월만에 향상된 성적표를 받아보세요 !!!
+
+초. 중. 고 재수생 (1:1 수준별 맞춤 수업)
+영어, 수학 중심으로 전반도적인 내신관리
+시험기간 타과목 관리 및 부족한 부분 채움 수업
+성적 변화가 없는 초등부, 특목고, 외고 준비하는 중등부
+수증 내신 상위 5% 완벽한 대비를 위한 고등부
+수년간 경력의 실력있는 교사의 성실한 책임지도
+    </textarea></td>
   </tr>
   <tr>
     <td class="label"><label>관련 그림</label></td>
@@ -26,7 +35,7 @@
     <td class="input"><input type="text" name="name" /></td>
   </tr>
   <tr>
-    <td></td><td class="button"><input type="submit" value="뿅" /></td>
+    <td></td><td class="button"><input type="submit" value="전단지 슉슉" /></td>
   </tr>
 </table>
 </form>
